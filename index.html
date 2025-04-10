@@ -12,31 +12,32 @@
   font-weight: 400;
   font-style: normal;
 }
+
     </style>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-400 poppins">
+<body id="theme-color" class="bg-gray-400 poppins pt-4">
   <!-- navbar -->
-  <nav class="my-5 mx-20">
-    <div class=" navbar bg-[#FFFF] shadow-sm rounded-2xl">
+  <nav class="mx-20">
+    <div class="navbar bg-[#FFFF] shadow-sm rounded-2xl">
       <div class="flex-1">
         <img src="/assets/logo.png" alt="">
         <a class="btn btn-ghost text-xl"><span>Dev</span>Board</a>
       </div>
       <div class="flex-none">
         <ul class="menu menu-horizontal  px-1">
-          <li><a><img src="/assets/checkbox.png" alt="">23</a></li>
+          <li><img src="/assets/checkbox.png" alt=""><span id="Completed">23</span></li>
           <li>
             <div>
-              <button><img src="/assets/theme-btn.png" alt=""></button>
+              <button id="theme"><img src="/assets/theme-btn.png" alt=""> </button>
             </div>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <section class="flex mt-5 mx-20 gap-5">
+  <section class="flex mt-5 mx-20 gap-5 max-w-fit">
     <div class="bg-white rounded-2xl">
       <div class="flex gap-4 mx-4 my-4">
 
@@ -46,7 +47,7 @@
           </div>
           <div class="flex-row">
             <p>Task Assigned</p>
-            <h3>06</h3>
+            <h3 id="assigned" class="text-xl font-semibold">06</h3>
           </div>
         </div>
         <div id="Discover" class="flex bg-gradient-to-br from-[#3752FD] to-[#9BA8F8] rounded-xl pl-10 pr-20 py-3">
@@ -76,7 +77,7 @@
           <div class="bg-[#F4F7FF] gap-6 rounded-xl">
               <div class="px-6 pt-6">
                 <p class="text-center font-normal bg-[#FFFFFF] rounded-lg w-[114px] h-[40px] p-2">ShopEase</p>
-                <h2 class="my-4 font-medium text-xl">Fix Mobile Button Issue</h2>
+                <h2 id="fix" class="my-4 font-medium text-xl">Fix Mobile Button Issue</h2>
                 <div class="w-[294px] h-[92px] rounded-lg bg-[#FFFFFF] overflow-y-scroll p-4"><p class="font-normal">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
                   and ensure onClick works properly</p></div>
               </div>
@@ -86,14 +87,14 @@
               <div class="flex justify-between px-6 pb-6">
                 <div><p class="font-semibold">Deadline</p>
                 <p>21 March 2025</p></div>
-                <div><button id="task-btn" class="btn bg-blue-700 text-white">Completed</button></div>
+                <div><button id="task-btn1" class="btn bg-blue-700 text-white">Completed</button></div>
               </div>
           </div>
           <!-- card-2 -->
           <div class="bg-[#F4F7FF] gap-6 rounded-xl">
             <div class="px-6 pt-6">
               <p class="text-center font-normal bg-[#FFFFFF] rounded-lg w-[114px] h-[40px] p-2">CloudSync</p>
-              <h2 class="my-4 font-medium text-xl">Add Dark Mode</h2>
+              <h2 id="add" class="my-4 font-medium text-xl">Add Dark Mode</h2>
               <div class="w-[294px] h-[92px] rounded-lg bg-[#FFFFFF] overflow-y-scroll p-4"><p class="font-normal">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p></div>
             </div>
             <br>
@@ -102,14 +103,14 @@
             <div class="flex justify-between px-6 pb-6">
               <div><p class="font-semibold">Deadline</p>
               <p>21 March 2025</p></div>
-              <div><button id="task-btn" class="btn btn-ghost bg-blue-700 text-white">Completed</button></div>
+              <div><button id="task-btn2" class="btn btn-ghost bg-blue-700 text-white">Completed</button></div>
             </div>
           </div>
           <!-- card-3 -->
           <div class="bg-[#F4F7FF] gap-6 rounded-xl">
           <div class="px-6 pt-6">
             <p class="text-center font-normal bg-[#FFFFFF] rounded-lg w-[114px] h-[40px] p-2">ShiftPay</p>
-            <h2 class="my-4 font-medium text-xl">Optimize Home Page</h2>
+            <h2 id="optimize" class="my-4 font-medium text-xl">Optimize Home Page</h2>
             <div class="w-[294px] h-[92px] rounded-lg bg-[#FFFFFF] overflow-y-scroll p-4"><p class="font-normal">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
               and ensure onClick works properly</p></div>
           </div>
@@ -119,72 +120,75 @@
           <div class="flex justify-between px-6 pb-6">
             <div><p class="font-semibold">Deadline</p>
             <p>21 March 2025</p></div>
-            <div><button class="btn btn-ghost bg-blue-700 text-white">Completed</button></div>
+            <div><button id="task-btn3" class="btn btn-ghost bg-blue-700 text-white">Completed</button></div>
           </div>
           </div>
           <!-- card-4 -->
           <div class="bg-[#F4F7FF] gap-6 rounded-xl">
-        <div class="px-6 pt-6">
+          <div class="px-6 pt-6">
           <p class="text-center font-normal bg-[#FFFFFF] rounded-lg w-[114px] h-[40px] p-2">Meta</p>
-          <h2 class="my-4 font-medium text-xl">Add New Emoji  🤲</h2>
+          <h2 id="emoji" class="my-4 font-medium text-xl">Add New Emoji  🤲</h2>
           <div class="w-[294px] h-[92px] rounded-lg bg-[#FFFFFF] overflow-y-scroll p-4"><p class="font-normal">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
             and ensure onClick works properly</p></div>
+          </div>
+          <br>
+          <hr>
+          <br>
+          <div class="flex justify-between px-6 pb-6">
+          <div><p class="font-semibold">Deadline</p>
+          <p>21 March 2025</p></div>
+          <div><button id="task-btn4" class="btn btn-ghost bg-blue-700 text-white">Completed</button></div>
+          </div>
+          </div>
+          <!-- card-5 -->
+          <div class="bg-[#F4F7FF] gap-6 rounded-xl">
+          <div class="px-6 pt-6">
+          <p class="text-center font-normal bg-[#FFFFFF] rounded-lg w-[114px] h-[40px] p-2">Google LLC</p>
+          <h2 id="api" class="my-4 font-medium text-xl">Integrate OpenAI API</h2>
+          <div class="w-[294px] h-[92px] rounded-lg bg-[#FFFFFF] overflow-y-scroll p-4"><p class="font-normal">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+          and ensure onClick works properly</p></div>
+          </div>
+        <br>
+        <hr>
+        <br>
+        <div class="flex justify-between px-6 pb-6">
+        <div><p class="font-semibold">Deadline</p>
+        <p>21 March 2025</p></div>
+        <div><button id="task-btn5" class="btn btn-ghost bg-blue-700 text-white">Completed</button></div>
+        </div>
+          </div>
+          <!-- card-6 -->
+          <div class="bg-[#F4F7FF] gap-6 rounded-xl">
+        <div class="px-6 pt-6">
+        <p class="text-center font-normal bg-[#FFFFFF] rounded-lg w-[114px] h-[40px] p-2">Glassdoar</p>
+        <h2 id="job" class="my-4 font-medium text-xl">Improve Job Searching</h2>
+       <div class="w-[294px] h-[92px] rounded-lg bg-[#FFFFFF] overflow-y-scroll p-4"><p class="font-normal">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+        and ensure onClick works properly</p></div>
         </div>
         <br>
         <hr>
         <br>
         <div class="flex justify-between px-6 pb-6">
-          <div><p class="font-semibold">Deadline</p>
-          <p>21 March 2025</p></div>
-          <div><button class="btn btn-ghost bg-blue-700 text-white">Completed</button></div>
-        </div>
-          </div>
-          <!-- card-5 -->
-          <div class="bg-[#F4F7FF] gap-6 rounded-xl">
-      <div class="px-6 pt-6">
-        <p class="text-center font-normal bg-[#FFFFFF] rounded-lg w-[114px] h-[40px] p-2">Google LLC</p>
-        <h2 class="my-4 font-medium text-xl">Integrate OpenAI API</h2>
-        <div class="w-[294px] h-[92px] rounded-lg bg-[#FFFFFF] overflow-y-scroll p-4"><p class="font-normal">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
-          and ensure onClick works properly</p></div>
-      </div>
-      <br>
-      <hr>
-      <br>
-      <div class="flex justify-between px-6 pb-6">
         <div><p class="font-semibold">Deadline</p>
         <p>21 March 2025</p></div>
-        <div><button class="btn btn-ghost bg-blue-700 text-white">Completed</button></div>
-      </div>
+        <div><button id="task-btn6" class="btn btn-ghost bg-blue-700 text-white">Completed</button></div>
+        </div>
           </div>
-          <!-- card-6 -->
-          <div class="bg-[#F4F7FF] gap-6 rounded-xl">
-    <div class="px-6 pt-6">
-      <p class="text-center font-normal bg-[#FFFFFF] rounded-lg w-[114px] h-[40px] p-2">Glassdoar</p>
-      <h2 class="my-4 font-medium text-xl">Improve Job Searching</h2>
-      <div class="w-[294px] h-[92px] rounded-lg bg-[#FFFFFF] overflow-y-scroll p-4"><p class="font-normal">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
-        and ensure onClick works properly</p></div>
+        </div>
     </div>
-    <br>
-    <hr>
-    <br>
-    <div class="flex justify-between px-6 pb-6">
-      <div><p class="font-semibold">Deadline</p>
-      <p>21 March 2025</p></div>
-      <div><button class="btn btn-ghost bg-blue-700 text-white">Completed</button></div>
-    </div>
-          </div>
-          </div>
-      </div>
-        <div class="bg-white rounded-xl">
+        <section class="bg-white rounded-xl w-fit">
           <div class="flex mx-20 mt-5">
             <img src="/assets/activity.png" alt=""><h1>Activity Log</h1>
           </div>
           <div class="mx-20 my-5">
-            <button class="btn bg-blue-700 text-white">Clear History</button>
+            <button id="Clear" class="btn bg-blue-700 text-white">Clear History</button>
           </div>
           <hr>
+          <section id="history">
 
-        </div>
+          </section>
+
+        </section>
   </section>
   <script src="/utilities/utilities.js"></script>
   <script src="/scripts/task.js"></script>
